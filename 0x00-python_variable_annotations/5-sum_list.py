@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """Module 5-sum_list contains a function that takes
 a list of floats as argument and returns their sum
 """

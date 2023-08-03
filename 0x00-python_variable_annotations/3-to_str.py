@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """Module 3-to_str contains a type-annotated function that
 takes a float as argument and returns its string representation
 """

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """Module 1-concat contains a type-annotated function that takes
 two strings as arguments and returns a concatenated string
 """
