@@ -7,26 +7,26 @@ from typing import Callable
 
 
 def make_multiplier(multiplier: float) -> Callable[[float], float]:
-    """Accepts a float parameter and returns a function
-    that multiplies a float by the first argument
+    """Creates a multiplier function
 
     Args:
         multiplier (float): product multiplier
 
     Return:
-        (float): product of multiplier and multiplicand
+        (function): function that returns the product of two floats
     """
-    return producer
 
+    def multiplier_fxn(multiplicand: float) -> float:
+        """Accepts a float parameter and returns
+        the product of the first argument and another float
 
-def producer(multiplicand: float) -> float:
-    """Accepts a float parameter and returns the product
-    of the float by the first argument of parent function
+        Args:
+            multiplicand (float): product multiplicand
 
-    Args:
-        multiplicand (float): product multiplicand
+        Return:
+            (float): product of multiplier and multiplicand
+        """
+        return multiplier * multiplicand
 
-    Return:
-        (float): product of multiplier and multiplicand
-    """
-    return multiplicand * multiplicand
+    return multiplier_fxn
+    # return lambda x: x * multiplier
