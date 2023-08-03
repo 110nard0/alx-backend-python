@@ -13,6 +13,6 @@ def sum_list(input_list: List[float]) -> float:
         input_list(list): List of floats
 
     Returns:
-        (float): sum of members of floats
+        (float): sum of members of input_list
     """
     return sum(input_list)
