@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Module 101-safely_get_value contains a type-annotated function 
+"""Module 101-safely_get_value contains a type-annotated function
 that takes a dictionary, key index and user-defined generic type
 """
 
