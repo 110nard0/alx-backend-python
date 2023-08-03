@@ -2,6 +2,7 @@
 two floats as arguments and returns a float value
 """
 
+
 def add(a: float, b: float) -> float:
     """Accepts two float parameters and returns the sum
 
