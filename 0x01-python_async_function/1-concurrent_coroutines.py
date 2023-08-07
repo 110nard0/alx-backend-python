@@ -22,7 +22,8 @@ async def wait_n(n: int, max_delay: int) -> List[float]:
     Returns:
         delays (list of floats): list of wait time (in seconds) delayed
     """
-    coroutines = [asyncio.create_task(wait_random(max_delay)) for _ in range(n)]
+    coroutines = [asyncio.create_task(wait_random(max_delay))
+                  for _ in range(n)]
     delays = []
 
     for task in asyncio.as_completed(coroutines):
