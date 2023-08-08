@@ -17,5 +17,4 @@ def task_wait_random(max_delay: int) -> asyncio.Task:
     Return:
         class <_asyncio.Task> instance object
     """
-    coroutine = wait_random(max_delay)
-    return asyncio.ensure_future(coroutine)
+    return asyncio.create_task(wait_random(max_delay))
