@@ -17,7 +17,7 @@ class TestAccessNestedMap(unittest.TestCase):
         """Tests access_nested_map function from utils module using unittest
         """
         result = access_nested_map(nested_map, path)
-        assert result == expected
+        self.assertEqual(result, expected)
 
 
 if __name__ == "__main__":
