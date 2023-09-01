@@ -7,8 +7,8 @@ from typing import (
 )
 
 from utils import (
-    get_json,
     access_nested_map,
+    get_json,
     memoize,
 )
 
