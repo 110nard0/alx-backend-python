@@ -118,6 +118,7 @@ class TestIntegrationGithubOrgClient(unittest.TestCase):
         }
 
         def get_payload(url):
+            """Obtain valid route payload"""
             if url in route_payload:
                 return Mock(**{'json.return_value': route_payload[url]})
             return HTTPError
@@ -126,12 +127,14 @@ class TestIntegrationGithubOrgClient(unittest.TestCase):
         cls.get_patcher.start()
 
     def test_public_repos(self):
+        """Test public_repos method"""
         self.assertEqual(
             GithubOrgClient("google").public_repos(),
             self.expected_repos
         )
 
     def test_public_repos_with_license(self):
+        """Tests public_repos method with a license"""
         self.assertEqual(
             GithubOrgClient("google").public_repos(license="apache-2.0"),
             self.apache2_repos
