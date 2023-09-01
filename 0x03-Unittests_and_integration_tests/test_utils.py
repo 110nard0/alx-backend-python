@@ -2,7 +2,6 @@
 """test_utils module"""
 
 import unittest
-import utils
 from parameterized import parameterized
 from unittest.mock import patch
 from utils import access_nested_map, get_json, memoize
@@ -44,7 +43,7 @@ class TestGetJson(unittest.TestCase):
         """Test get_json method returns expected result
         """
         mock_get.return_value.json.return_value = test_payload
-        self.assertEqual(utils.get_json(test_url), test_payload)
+        self.assertEqual(get_json(test_url), test_payload)
         mock_get.assert_called_once_with(test_url)
 
 
